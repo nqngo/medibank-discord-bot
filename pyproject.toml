@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "amipwned"
+version = "0.1.0"
+description = ""
+authors = ["Nhat Ngo"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+discord-py-slash-command = "^4.2.1"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
