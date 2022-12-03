@@ -7,7 +7,7 @@ Simple bot to grep the Medibank data dumps.
 - The Medibank data dump.
 - `ripgrep`
 - Your compression format of choice.
-- `python3.8+`
+- `python3.10`
 
 ## Setup
 
