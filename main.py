@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import interactions
 import os
 import subprocess
@@ -55,7 +57,7 @@ async def search(term1, term2=None, term3=None, term4=None, term5=None):
   return result
 
 
-bot = interactions.Client(os.environ.get['DISCORD_TOKEN'])
+bot = interactions.Client(os.environ.get('DISCORD_TOKEN'))
 
 @bot.event
 async def on_ready():
@@ -67,7 +69,7 @@ async def on_ready():
 @bot.command(
   name="amipwned",
   description="Search Medibank leaked csvs. Use email, name, DoB...",
-  scope=os.environ.get['DISCORD_GUILDS'].split(', '),
+  scope=[int(guild) for guild in os.environ.get('DISCORD_GUILDS').split(', ')],
   options = [
     interactions.Option(
       name="term",
